@@ -1,5 +1,5 @@
 var myApp = angular.module('myApp', ['ngRoute']);
-
+var myUrl = 'http://127.0.0.1:8000/'
 myApp.config(function ($routeProvider) {
 
     $routeProvider
@@ -21,10 +21,20 @@ myApp.config(function ($routeProvider) {
 
 });
 
-myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
+myApp.controller('mainController', ['$scope', '$log', '$http', function($scope, $log, $http) {
 
-    $scope.name = 'Main';
-
+  var getPersonUrl = myUrl + 'get_person/1'
+  $http({
+      method : "GET",
+      url : getPersonUrl
+  }).then(function mySuccess(response) {
+      console.log(response)
+      $scope.name = response.data[0]['first_name'] + ' ' + response.data[0]['last_name']
+      $scope.rating = Number.parseFloat(response.data[0]['rating']).toFixed(1)
+      $scope.ratingFloat = Math.round((response.data[0]['rating']-$scope.rating) * 1000.)
+  }, function myError(response) {
+      console.log(response)
+  });
 }]);
 
 myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams) {

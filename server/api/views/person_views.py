@@ -1,6 +1,6 @@
-from .models import Person
+from ..models import Person
 from rest_framework.decorators import api_view
-from .serializers import PersonSerializer
+from ..serializers import PersonSerializer
 from rest_framework.response import Response
 
 # Create your views here.

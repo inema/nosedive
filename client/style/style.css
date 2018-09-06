@@ -43,6 +43,7 @@ body {
   margin-top: 41px;
   margin-left: 5px;
   border-radius: 5px;
+  display: none;
 }
 
 .search-bar {
