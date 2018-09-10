@@ -1,0 +1,34 @@
+<div class="container-fluid main">
+  <div class="row">
+    <div class="col-10">
+      <app-name-header *ngIf="person" [person]="person"></app-name-header>
+      <div class="row nav-row">
+        <nav class="navbar">
+            <ul class="nav">
+              <li class="active first"><a href="#">ACTIVITY</a></li>
+              <li class="mid"><a href="#">MOMENTS</a></li>
+              <li class="mid"><a href="#">PHOTOS</a></li>
+              <li class="mid"><a href="#">RATED</a></li>
+              <li class="last"><a href="#">FRIENDS</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-2 side-bar">
+      <div class="container">
+        <div class="row title">Search</div>
+        <div class="row">
+          <div class="search-bar">
+           <input type="text" />
+           <img src="images/search.svg"/>
+         </div>
+        </div>
+        <div class="row title">TRENDING</div>
+        <div class=" row title">HIGHEST RATED POSTS</div>
+        <div class="row title">HOME</div>
+        <div class="row title">FIND FRIENDS</div>
+        <div class="row title">PRIVACY</div>
+      </div>
+    </div>
+  </div>
+</div>
