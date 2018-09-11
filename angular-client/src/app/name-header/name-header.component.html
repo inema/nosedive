@@ -3,11 +3,11 @@
     <img class="profile-pic" src="../../assets/img/alice_eve_1.jpe" alt="Alice Eve"/>
   </div>
   <div class="col user-info">
-    <div class="row main-name">{{ person.first_name + ' ' + person.last_name }}</div>
+    <div class="row main-name">{{ person.name }}</div>
     <div class="row row-rating">
       <div class="main-rating">{{ person.ratingMain }}</div>
       <div class="main-floating">{{ person.ratingFloat }}</div>
-      <img class="prime-user" src="../../assets/img/prime_user.png" alt="Prime User"/>
+      <img [hidden]="person.rating<4.8" class="prime-user" src="../../assets/img/prime_user.png" alt="Prime User"/>
     </div>
   </div>
 </div>
