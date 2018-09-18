@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'app-name-header',
+  selector: 'name-header',
   templateUrl: './name-header.component.html',
   styleUrls: ['./name-header.component.css']
 })

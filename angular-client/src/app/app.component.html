@@ -1,7 +1,7 @@
 <div class="container-fluid main">
   <div class="row">
     <div class="col-10">
-      <app-name-header *ngIf="person" [person]="person"></app-name-header>
+      <name-header *ngIf="person" [person]="person"></name-header>
       <div class="row nav-row">
         <nav class="navbar">
             <ul class="nav">
@@ -13,8 +13,8 @@
             </ul>
         </nav>
       </div>
-      <app-main-post *ngIf="person" [person]="person"></app-main-post>
-      <app-main-post *ngIf="person" [person]="person"></app-main-post>
+      <main-post *ngIf="person" [person]="person"></main-post>
+      <main-post *ngIf="person" [person]="person"></main-post>
     </div>
     <div class="col-2 side-bar">
       <div class="container">
